@@ -171,23 +171,29 @@ test('Inscrição estadual vazia', () => {
 test('Exercício 2 - customizado', () => {
 
   // Defina seus próprios valores para as variáveis a seguir
-  let nome_loja = "";
-  let logradouro = "";
-  let numero = 0;
-  let complemento = "";
-  let bairro = "";
-  let municipio = "";
-  let estado = "";
-  let cep = "";
-  let telefone = "";
-  let observacao = "";
-  let cnpj = "";
-  let inscricao_estadual = "";
+  let nome_loja = "Boa vista Flores";
+  let logradouro = "Rua Jardim Peres";
+  let numero = 122;
+  let complemento = "EUC F30/31/44";
+  let bairro = "Centro";
+  let municipio = "Monteiro";
+  let estado = "PB";
+  let cep = "58500000";
+  let telefone = "(99) 9999-9999";
+  let observacao = "Loja 122 (PDB)";
+  let cnpj = "22.300.551/0110-56";
+  let inscricao_estadual = "432.118.667.777";
 
   //E atualize o texto esperado abaixo
   expect(cupom_dados_loja_param(nome_loja, logradouro, numero, complemento,
     bairro, municipio, estado, cep, telefone, observacao, cnpj, 
     inscricao_estadual)).toBe(
-    `
+`Boa vista Flores
+Rua Jardim Peres, 122 EUC F30/31/44
+Centro - Monteiro - PB
+CEP:58500000 Tel (99) 9999-9999
+Loja 122 (PDB)
+CNPJ: 22.300.551/0110-56
+IE: 432.118.667.777
 `);
 });
